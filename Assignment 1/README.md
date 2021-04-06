@@ -12,5 +12,6 @@ I used for loops and polar coordinates to position particles in 2 different orbi
 ## Process
 I got done faster than I thought and it was relatively easy so I didn't know what to do to make my project more elaborate/aesthetically pleasing. Then I realized that it wasn't the best concept for a still image as orbitals have very few non-dynamic properties. The hardest part was making a triad of colors. One thing I failed at and which I still don't understand is coming up with an elegant way of coding the cycling 360 degree color rotation (so it doesn't go beyond 360 degrees).
 
-## GIF:
-![myGif](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%201/Kapture%202021-04-05%20at%2014.33.14.gif)
+## Images:
+![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%201/Screen%20Shot%202021-04-06%20at%2012.15.40%20PM.png)
+![img2](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%201/Screen%20Shot%202021-04-06%20at%2012.25.08%20PM.png)
