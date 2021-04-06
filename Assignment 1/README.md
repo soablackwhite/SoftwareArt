@@ -15,3 +15,4 @@ I got done faster than I thought and it was relatively easy so I didn't know wha
 ## Images:
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%201/Screen%20Shot%202021-04-06%20at%2012.15.40%20PM.png)
 ![img2](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%201/Screen%20Shot%202021-04-06%20at%2012.25.08%20PM.png)
+![img2](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%201/Screen%20Shot%202021-04-06%20at%2012.31.28%20PM.png)
