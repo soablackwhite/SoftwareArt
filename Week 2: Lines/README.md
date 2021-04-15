@@ -16,5 +16,5 @@ Points are scattered throughout the canvas, and lines are drawn for points that 
 
 ## Colors & GIF
 I'm sticking with black and white for this assignment. I have a minimalist approach to aesthetics, and I can't think of an interesting color variation that would look better than good old black and white.
-![img2](https://github.com/soablackwhite/SoftwareArt/blob/main/Week%201:%20Circles/Screen%20Shot%202021-04-06%20at%2012.57.14%20PM.png)
+![img2](https://github.com/soablackwhite/SoftwareArt/blob/main/Week%202:%20Lines/ezgif-4-57d55c655f92.gif)
 
