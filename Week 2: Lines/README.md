@@ -4,7 +4,6 @@
 Points are scattered throughout the canvas, and lines are drawn for points that are close enough to each other. The GUI allows the user to vary line width and the distance threshold for drawing the line. An uncertainty factor can also be modified to make the structure look like it's shaking.
 
 ```C++
-//choose center of equilateral triangle
     for(int i=0; i<total/2; i++){ //we stop at total/2 to avoid double counting
         for(int j=total/2; j<total; j++){
             if (ofDist(points[j].x, points[j].y,points[i].x, points[i].y)<=minDist){
