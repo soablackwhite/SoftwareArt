@@ -44,7 +44,7 @@ This project is four-fold: cylinder, parabola, noise, and constellations. First,
 ```
 
 # Optimization:
-I thought I'd somehow use the wireframe and vertex drawing properties of meshes, but I really didn't. I could optimize this by removing the mesh and making my project based on a position array that traces a line between close points.
+I thought I'd somehow use the wireframe and vertex drawing properties of meshes, but I really didn't. I could optimize this by removing the mesh and making my project based on a position array that traces a line between close points. I'm also thinking about making this a GIF-making program, which would allow for a perfect loop and enhanced quality without giving up performance (though it'd suck that I can't run it live).
 
 
 ## Images:
