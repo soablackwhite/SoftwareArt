@@ -5,6 +5,7 @@ An animated pipe where the user is surrounded by constellations of different col
 
 ## Color
 I’m using five color schemes: grayscale, neon, tech blue, quicksilver, and NYU. Disregard the names, I’ve made them up. But as a last minute addition this is inefficiently coded as a series of if-statements depending on input from the project’s GUI. I chose my color couplings based on intuition, and varied the background accordingly. I’ve read a lot about color theory but I’ve found that I rarely use it in a scientific process but more as an intuition, which is how I have proceeded in my artistic choices. 
+
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/Screen%20Shot%202021-04-19%20at%201.05.45%20PM.png)
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/Screen%20Shot%202021-04-19%20at%201.03.40%20PM.png)
 
