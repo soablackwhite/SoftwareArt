@@ -1,4 +1,4 @@
-# Assignment 2: 
+# Assignment 2: Constellation Pipe
 
 ## Color
 The user can use the triad slider to change the hue of the particles. The user essentially only changes the color of the core, and the other orbits are automatically adapted as the corresponding triadic colors. Considering the hue is up to 360, I basically increment 120 twice for each color, and map it to the 255 value.
