@@ -30,13 +30,17 @@ class ofApp : public ofBaseApp{
     ofParameter <float> noise;
     ofParameter <float> threshold;
     ofParameter <float> zoom;
-    ofParameter <float> speedX;
-    ofParameter <float> speedY;
-    ofParameter <float> speedZ;
     
     ofParameterGroup transform;
     ofParameter <ofVec3f> rotate;
     ofParameter <ofVec3f> translate;
     ofParameter <ofVec3f> radii;
     ofParameter <ofVec3f> lightPos;
+    
+    ofxGuiGroup colorScheme;
+    ofxButton neon;
+    ofxButton blackwhite2;
+    ofxButton techblue;
+    ofxButton quicksilver;
+    ofxButton nyu;
 };
