@@ -1,13 +1,14 @@
 # Assignment 2: Constellation Pipe
 
-## Color
+## Concept
 The user can use the triad slider to change the hue of the particles. The user essentially only changes the color of the core, and the other orbits are automatically adapted as the corresponding triadic colors. Considering the hue is up to 360, I basically increment 120 twice for each color, and map it to the 255 value.
 
-## Shape
+## Color
 I chose spheres because spheres look cool, and it just seemed more consistent with all the trigonometry I was using for this.
 
 ## Code
-I used for loops and polar coordinates to position particles in 2 different orbits around the core, and applied rotation on the appropriate axes to move them. The size of the core pulses in a sine wave, while its skeleton pulses in a cosine wave, and so they meet periodically.
+This project is four-fold: cylinder, noise, and constellations. First, the cylinder. I knew for a fact that I wanted a sort of tube/tunnel, so in order to build that I drew circles throughout the length of a line to make the cylinder. Next, I wanted the cylinder to bend. This was the hard part. I found many works involving a torus so I thought I'd do the same thing, and maybe put the camera in the middle of a torus to simulate the tube. But that took too much processing power. So instead I thought I'd just make a parabola, with modifiable variables. Understanding the effects of variables in standard quadratic equation was too cumbersome to be practical in parametric GUI incorporation. So I ended up taking the parametric equation of an ellipse, and limiting it to the
+
 ```C++
     //orbiting particles
     for(int i=0; i<particles; i++){
