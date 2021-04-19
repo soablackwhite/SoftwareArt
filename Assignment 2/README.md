@@ -14,32 +14,32 @@ This project is four-fold: cylinder, parabola, noise, and constellations. First,
 
 ```C++
         for(int i=0; i<=rows; i++){
-        //define centers of circles, this is the bending of the tunnel
-        for (int j=0; j<=cols; j++){
-            
-            angles[i*j+j] = ofRandom(135); //store angular positions
-            float angle = ofDegToRad(angles[i*j+j]);
-            
-            //parametric equation of ellipse
-            float cx = 0;
-            float cy = r1*cos(angle);
-            float cz = r2*sin(angle);
-            
-            //drawing the circles
-            angles2[i*j+j] = ofRandom(360); //store angular positions
-            float angle2 = ofDegToRad(angles2[i*j+j]);
-            
-            //parametric equation of circle
-            float x = cx + radius*cos(angle2);
-            float y = cy + radius*sin(angle2);
-            float z = 2*cz;
-            mesh.addVertex(ofPoint(x,y,z));
-            if ((int)((i))%2==0){
-                mesh.addColor(ofFloatColor(1,.3)); //black
-            } else {
-                mesh.addColor(ofFloatColor(1,.7)); //white
-            }
-        }
+                //define centers of circles, this is the bending of the tunnel
+                for (int j=0; j<=cols; j++){
+
+                    angles[i*j+j] = ofRandom(135); //store angular positions
+                    float angle = ofDegToRad(angles[i*j+j]);
+
+                    //parametric equation of ellipse
+                    float cx = 0;
+                    float cy = r1*cos(angle);
+                    float cz = r2*sin(angle);
+
+                    //drawing the circles
+                    angles2[i*j+j] = ofRandom(360); //store angular positions
+                    float angle2 = ofDegToRad(angles2[i*j+j]);
+
+                    //parametric equation of circle
+                    float x = cx + radius*cos(angle2);
+                    float y = cy + radius*sin(angle2);
+                    float z = 2*cz;
+                    mesh.addVertex(ofPoint(x,y,z));
+                    if ((int)((i))%2==0){
+                        mesh.addColor(ofFloatColor(1,.3)); //black
+                    } else {
+                        mesh.addColor(ofFloatColor(1,.7)); //white
+                    }
+                }
     }
 ```
 
