@@ -49,4 +49,4 @@ I thought I'd somehow use the wireframe and vertex drawing properties of meshes,
 
 ## Images:
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/neonTunnel.gif)
-![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/loko2.gif)
+![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/loko-min.gif)
