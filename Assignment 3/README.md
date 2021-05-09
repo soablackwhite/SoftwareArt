@@ -46,5 +46,6 @@ And this is how I do the final moments' animation
 
 
 # Image & Video
+
 https://vimeo.com/547149242
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%203/mysphere.png)
