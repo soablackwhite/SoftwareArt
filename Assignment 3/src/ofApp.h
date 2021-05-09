@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
-#define MAXPOINTS 1000
+#define MAXPOINTS 10000
 class ofApp : public ofBaseApp{
 
 	public:
@@ -27,8 +27,15 @@ class ofApp : public ofBaseApp{
     int nPts = 0;
     ofPoint pts2[MAXPOINTS];
     int nPts2 = 0;
+    ofPoint pts3[MAXPOINTS];
+    int nPts3= 0;
+    ofPoint pts4[MAXPOINTS];
+    int nPts4 = 0;
+
     ofPolyline polyline;
     ofPolyline polyline2;
+    ofPolyline polyline3;
+    ofPolyline polyline4;
     
     //gui
     ofxPanel gui;
