@@ -14,9 +14,6 @@ These 2 failures greatly limited me in my direction because I no longer could fi
 
 The end note lerps the rotation, the zoom out, and the positions of the walkers towards the center. This assignment is very hard coded and I am truly disappointed in it. But I learned a lot from my hexagon sphere research so I don't regret not dropping the idea, as I will further research approximations during the summer.
 
-![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/Screen%20Shot%202021-04-19%20at%201.05.45%20PM.png)
-![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/Screen%20Shot%202021-04-19%20at%201.03.40%20PM.png)
-
 ## Code
 This part is how the 3 scripted walker brushes move
 ```C++
@@ -50,4 +47,4 @@ And this is how I do the final moments' animation
 
 # Image & Video
 https://vimeo.com/547149242
-
+![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/mysphere.jpg)
