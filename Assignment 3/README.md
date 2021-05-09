@@ -1,53 +1,56 @@
-# Assignment 2: Constellation Pipe
+# Assignment 3: Music Vis
 
 ## Concept
-An animated pipe where the user is surrounded by constellations of different colors.
+4 Walkers are scattered around the surface of a sphere and navigate it based on a noise function that fluctuates with the beat of the music.
 
-## Color
-I’m using five color schemes: grayscale, neon, tech blue, quicksilver, and NYU. Disregard the names, I’ve made them up. But as a last minute addition this is inefficiently coded as a series of if-statements depending on input from the project’s GUI. I chose my color couplings based on intuition, and varied the background accordingly. I’ve read a lot about color theory but I’ve found that I rarely use it in a scientific process but more as an intuition, which is how I have proceeded in my artistic choices. 
+## Process
+I think this was my most disappointing project in this semester, I really wanted to make a spherical grid of hexagons, but I really couldn't make it work on time. 
+
+My second idea was the walkersm where the thickness of the brush would vary with the music and new shapes could be drawn based on the beat. However that proved to be extremely difficult, because the brush would have to map into the spherical surface of a brush so drawing a circle at point X would just draw a flat brush stroke that will not stick to the spherical surface. That was an oversight on my part and something I spent a lot of time trying to remedy but couldn't. 
+
+Another thing I wanted to do was having the camera view follow the brush. That turned out horrible and stretched into 6 hours of notebook scribbling that ended in vain. The camera follow the position of the 'walker' brush but never rotate with it the way I wanted it to. So basically the camera always looked at the same direction no matter what, even if its position corresponded to the walker's position. With some tinkering I managed to create something sort of working but really it looked awful and wasn't the smooth 1st POV vision I had. So instead I just kept a fixed POV while rotating the sphere to give a nice aesthetic effect.
+
+These 2 failures greatly limited me in my direction because I no longer could find something that depended on the music, as my objective was to map the music as POSITIONS on the sphere, and make shapes spawn on it based on the note played. But since the shapes were flat and wouldn't map to the sphere, not having a variable POV made it look very ugly. I completely changed my idea and added an interactive drawing element where the user could have their own walker, alongside the 3 others that interact with the music.
+
+The end note lerps the rotation, the zoom out, and the positions of the walkers towards the center. This assignment is very hard coded and I am truly disappointed in it. But I learned a lot from my hexagon sphere research so I don't regret not dropping the idea, as I will further research approximations during the summer.
 
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/Screen%20Shot%202021-04-19%20at%201.05.45%20PM.png)
 ![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/Screen%20Shot%202021-04-19%20at%201.03.40%20PM.png)
 
 ## Code
-This project is four-fold: cylinder, parabola, noise, and constellations. First, the cylinder. I knew for a fact that I wanted a sort of tube/tunnel, so in order to build that I drew circles throughout the length of a line to make the cylinder. Next, I wanted the cylinder to bend. This was the hard part. I found many works involving a torus so I thought I'd do the same thing, and maybe put the camera in the middle of a torus to simulate the tube. But that took too much processing power. So instead I thought I'd just make a parabola, with modifiable variables. But again, understanding the effects of variables in standard quadratic equation was too cumbersome to be practical in parametric GUI incorporation. So I ended up taking the parametric equation of an ellipse, and limiting it to one quadrant (0, PI/2). So along the curve of that ellipse, I basically place the centers of each circle, thus making a bent cylinder. For motion and placement of points, I first scatter them randomly around the surface area equation I wrote in the setup, then I use noise to move them around based on that same equation by varying the angles. Finally, for each point in our mesh, we calculate the distance with other points and trace lines of corresponding opacity. 
-
+This part is how the 3 scripted walker brushes move
 ```C++
-        for(int i=0; i<=rows; i++){
-                //define centers of circles, this is the bending of the tunnel
-                for (int j=0; j<=cols; j++){
-
-                    angles[i*j+j] = ofRandom(135); //store angular positions
-                    float angle = ofDegToRad(angles[i*j+j]);
-
-                    //parametric equation of ellipse
-                    float cx = 0;
-                    float cy = r1*cos(angle);
-                    float cz = r2*sin(angle);
-
-                    //drawing the circles
-                    angles2[i*j+j] = ofRandom(360); //store angular positions
-                    float angle2 = ofDegToRad(angles2[i*j+j]);
-
-                    //parametric equation of circle
-                    float x = cx + radius*cos(angle2);
-                    float y = cy + radius*sin(angle2);
-                    float z = 2*cz;
-                    mesh.addVertex(ofPoint(x,y,z));
-                    if ((int)((i))%2==0){
-                        mesh.addColor(ofFloatColor(1,.3)); //black
-                    } else {
-                        mesh.addColor(ofFloatColor(1,.7)); //white
-                    }
-                }
-    }
+        v+=5*PI*speedV + 0.01*ofNoise(noiseV*0.01*ofGetElapsedTimef());
+        u+=5*PI*speedU + 0.01*ofNoise(noiseU*0.01*ofGetElapsedTimef());
+        
+        v4+=5*PI*speedV + 0.01*ofNoise(0.1+noiseV*0.016*ofGetElapsedTimef());
+        u4+=5*PI*speedU + 0.01*ofNoise(0.3+noiseU*0.09*ofGetElapsedTimef());
+        
+        v3+=5*PI*speedV + 0.01*ofNoise(0.05+noiseV*0.02*ofGetElapsedTimef());
+        u3+=5*PI*speedU + 0.01*ofNoise(0.009+noiseU*0.015*ofGetElapsedTimef());
+```
+And this is how I do the final moments' animation
+```C++
+        if (sound.getPosition()>0.7 || !sound.isPlaying()){
+            counter*=0.995;
+            if(zoom>-800 && counter>0.001){
+                zoom-=sound.getPosition()*sound.getPosition();
+            }
+        }
+        rotate2+=counter;
+        
+        ///some other messy code
+        else {
+                pos.x = ofLerp(pos.x, 0, 0.01);
+                pos.y = ofLerp(pos.y, 0, 0.01);
+                pos.z = ofLerp(pos.z, 0, 0.01);
+        }
 ```
 
-# Optimization:
-I thought I'd somehow use the wireframe and vertex drawing properties of meshes, but I really didn't. I could optimize this by removing the mesh and making my project based on a position array that traces a line between close points. I'm also thinking about making this a GIF-making program, which would allow for a perfect loop and enhanced quality without giving up performance (though it'd suck that I can't run it live).
+
+# Image & Video
 
 
 ## GIF:
-![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/neonTunnel.gif)
-![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/loko-min.gif)
+![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/walkersphere.gif)
 
