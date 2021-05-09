@@ -49,8 +49,5 @@ And this is how I do the final moments' animation
 
 
 # Image & Video
-
-
-## GIF:
-![img1](https://github.com/soablackwhite/SoftwareArt/blob/main/Assignment%202/walkersphere.gif)
+https://vimeo.com/547149242
 
