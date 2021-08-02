@@ -4,9 +4,7 @@
 4 Walkers are scattered around the surface of a sphere and navigate it based on a noise function that fluctuates with the beat of the music.
 
 ## Process
-I think this was my most disappointing project in this semester, I really wanted to make a spherical grid of hexagons, but I really couldn't make it work on time. 
-
-My second idea was the walkersm where the thickness of the brush would vary with the music and new shapes could be drawn based on the beat. However that proved to be extremely difficult, because the brush would have to map into the spherical surface of a brush so drawing a circle at point X would just draw a flat brush stroke that will not stick to the spherical surface. That was an oversight on my part and something I spent a lot of time trying to remedy but couldn't. 
+For this project, my draft idea was to create walkers with varying brush thickness according to the music and new shapes that would be drawn based on the beat. However that proved to be extremely difficult, because the brush would have to map into the spherical surface of a brush so drawing a circle at point X would just draw a flat brush stroke that will not stick to the spherical surface. That was an oversight on my part and something I spent a lot of time trying to remedy but couldn't. 
 
 Another thing I wanted to do was having the camera view follow the brush. That turned out horrible and stretched into 6 hours of notebook scribbling that ended in vain. The camera follow the position of the 'walker' brush but never rotate with it the way I wanted it to. So basically the camera always looked at the same direction no matter what, even if its position corresponded to the walker's position. With some tinkering I managed to create something sort of working but really it looked awful and wasn't the smooth 1st POV vision I had. So instead I just kept a fixed POV while rotating the sphere to give a nice aesthetic effect.
 
