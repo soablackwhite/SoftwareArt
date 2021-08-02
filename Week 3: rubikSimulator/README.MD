@@ -28,7 +28,7 @@ void ofApp::shuffleMe(){
 }
 ```
 
-The rotation code is messy and while it's not hardcoded it could've been more elegant. 
+Still need to polish the rotation code, it could've been more efficient.
 
 
 ![GIF](https://github.com/soablackwhite/SoftwareArt/blob/main/Week%203:%20rubikSimulator/Kapture%202021-04-12%20at%2014.56.33-min.gif)
